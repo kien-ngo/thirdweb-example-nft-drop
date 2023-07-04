@@ -23,6 +23,7 @@ import {
   primaryColorConst,
   themeConst,
 } from "./consts/parameters";
+import PaperCheckoutWithCard from "./components/PaperCheckoutWithCard";
 
 const urlParams = new URL(window.location.toString()).searchParams;
 const contractAddress = urlParams.get("contract") || contractConst || "";
@@ -452,6 +453,7 @@ export default function Home() {
                       )}
                     </Web3Button>
                   </div>
+                  <PaperCheckoutWithCard mintQty={quantity} />
                 </div>
               )}
             </div>
